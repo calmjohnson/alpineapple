@@ -1,0 +1,8 @@
+<div class="flex justify-center">
+    <a
+      class="text-white"
+      href="https://www.flaticon.com/free-icons/pineapple"
+      title="pineapple icons"
+      >Pineapple icons created by Freepik - Flaticon</a
+    >
+</div>
