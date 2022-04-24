@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 return [
     'production' => false,
     'baseUrl' => '',
@@ -10,4 +12,7 @@ return [
             'path' => '{-title}'
         ]
     ],
+    'selected' => function ($page, $section) {
+        return Str::contains($page->getPath(), $section) ? 'selected' : '';
+    },
 ];

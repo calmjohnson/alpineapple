@@ -20,7 +20,7 @@ title: Alpine JS UI Components
     <!--BEGIN: Components-->
     <div class="mt-10 sm:mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         @foreach ($ui_components as $component)
-            <a href="{{ $component->getUrl() }}" class="flex flex-col space-y-2">
+            <a href="{{ $component->getUrl() }}" class="flex justify-center flex-col space-y-2">
                 @include('_partials.svgs.image', ['component' => $component->image])
                 <span class="text-base text-white font-medium">{{ $component->title }}</span>
             </a>

@@ -6,6 +6,10 @@
         <link rel="canonical" href="{{ $page->getUrl() }}">
         <meta name="description" content="{{ $page->description }}">
 
+        <!--BEGIN: Google verification-->
+        <meta name="google-site-verification" content="0adrCvwZ3UQ8wJrrJhhdIsu3CZFFBg6Z3yT-p3UFGvc" />
+        <!--BEGIN: Google verification-->
+        
         <!--BEGIN: Favicon-->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicon/apple-touch-icon.png' }}"/>
         <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon/favicon-32x32.png' }}"/>
