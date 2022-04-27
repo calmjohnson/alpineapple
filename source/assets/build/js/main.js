@@ -112,6 +112,47 @@ var module_default = src_default;
 
 /***/ }),
 
+/***/ "./node_modules/@ryangjchandler/alpine-clipboard/src/index.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@ryangjchandler/alpine-clipboard/src/index.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+let onCopy = () => {}
+
+function Clipboard(Alpine) {
+    Alpine.magic('clipboard', () => {
+        return function (target) {
+            if (typeof target === 'function') {
+                target = target()
+            }
+
+            if (typeof target === 'object') {
+                target = JSON.stringify(target)
+            }
+
+            return window.navigator.clipboard.writeText(target)
+                .then(onCopy)
+        }
+    })
+}
+
+Clipboard.configure = (config) => {
+    if (config.hasOwnProperty('onCopy') && typeof config.onCopy === 'function') {
+        onCopy = config.onCopy
+    }
+
+    return Clipboard
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Clipboard);
+
+/***/ }),
+
 /***/ "./node_modules/alpinejs/dist/module.esm.js":
 /*!**************************************************!*\
   !*** ./node_modules/alpinejs/dist/module.esm.js ***!
@@ -3052,11 +3093,18 @@ var module_default = src_default;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 /* harmony import */ var _alpinejs_collapse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alpinejs/collapse */ "./node_modules/@alpinejs/collapse/dist/module.esm.js");
+/* harmony import */ var _ryangjchandler_alpine_clipboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ryangjchandler/alpine-clipboard */ "./node_modules/@ryangjchandler/alpine-clipboard/src/index.js");
+
 
 
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_alpinejs_collapse__WEBPACK_IMPORTED_MODULE_1__["default"]);
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_ryangjchandler_alpine_clipboard__WEBPACK_IMPORTED_MODULE_2__["default"]);
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+
+function copyToClipboard() {
+  navigator.clipboard.write($refs.code.firstElementChild.outerHTML);
+}
 
 /***/ }),
 

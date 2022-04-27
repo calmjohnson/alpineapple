@@ -15,6 +15,7 @@
     },
     "dependencies": {
         "@alpinejs/collapse": "^3.10.2",
+        "@ryangjchandler/alpine-clipboard": "^2.1.0",
         "alpinejs": "^3.9.6",
         "cross-env": "^7.0.3",
         "fast-glob": "^3.2.11"

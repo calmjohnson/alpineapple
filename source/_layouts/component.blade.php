@@ -21,27 +21,23 @@
         <!--END: Favicon-->
 
         <title>{{ $page->title }} - Alpineapple</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css">
+        
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
+
+        
+        <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
     </head>
     <body class="font-Fira-Sans bg-slate-900">
         <!--BEGIN: Header-->
         @include('_partials.header')
         <!--END: Header-->
         
-        <div class="mx-10 mt-10 grid grid-cols-12 gap-10">
-            <!--BEGIN: Sidebar-->
-            <div class="col-span-2">
-                @include('_partials.sidebar')
-            </div>
-            <!--END: Sidebar-->
-            <!--BEGIN: Component-->
-            <div class="col-span-6">
-                @yield('body')
-            </div>
-            <!--END: Component-->
-        </div>
-
+        @yield('body')
+        
         <!--BEGIN: Footer-->
         @include('_partials.footer')
         <!--END: Footer-->
