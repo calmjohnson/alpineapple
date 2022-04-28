@@ -453,6 +453,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
+.left-0{
+  left: 0px;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -473,6 +477,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 7 / span 7;
 }
 
+.col-span-12{
+  grid-column: span 12 / span 12;
+}
+
+.col-span-10{
+  grid-column: span 10 / span 10;
+}
+
+.col-span-9{
+  grid-column: span 9 / span 9;
+}
+
 .mx-10{
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -491,6 +507,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-20{
   margin-left: 5rem;
   margin-right: 5rem;
+}
+
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-0{
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .mt-5{
@@ -523,6 +554,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .-mt-10{
   margin-top: -2.5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .flex{
@@ -569,6 +604,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.25rem;
 }
 
+.w-32{
+  width: 8rem;
+}
+
 .rotate-180{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -594,6 +633,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
 .justify-end{
   justify-content: flex-end;
 }
@@ -604,6 +647,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-10{
   gap: 2.5rem;
+}
+
+.gap-5{
+  gap: 1.25rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -628,6 +675,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .overflow-y-scroll{
@@ -729,6 +780,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 5rem;
 }
 
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -765,6 +826,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-black{
@@ -829,6 +895,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 640px){
 
+  .sm\:mx-10{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .sm\:mt-10{
     margin-top: 2.5rem;
   }
@@ -844,9 +915,38 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 768px){
 
+  .md\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-7{
+    grid-column: span 7 / span 7;
+  }
+
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
+
+  .md\:block{
+    display: block;
+  }
+
+  .md\:gap-10{
+    gap: 2.5rem;
+  }
+
+  .md\:p-20{
+    padding: 5rem;
+  }
+
   .md\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -854,5 +954,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:justify-center{
+    justify-content: center;
   }
 }

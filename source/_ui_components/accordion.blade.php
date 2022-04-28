@@ -1,23 +1,16 @@
 ---
 extends: _layouts.component
 title: Accordion
-description: How to build an accordion ui component using Alpine.js and Taiwind Css
+description: How to build an accordion ui component using Alpine.js and Tailwind Css
 author: Nonso Mbah
 image: accordion
 ---
 
 @section('body')
-<main class="mx-10 relative">
 
-    <div class="mt-10 grid grid-cols-12 gap-10">
-        <!--BEGIN: Sidebar-->
-        <div class="col-span-2">
-            @include('_partials.sidebar')
-        </div>
-        <!--END: Sidebar-->
         <!--BEGIN: Component-->
-        <div class="col-span-7 relative">
-            <h1 class="font-bold text-4xl text-white">{{ $page->title }}</h1>
+        <div class="col-span-12 w-auto md:col-span-7">
+            <h1 class="font-bold text-3xl md:text-4xl text-white">{{ $page->title }}</h1>
             
             <!--BEGIN: Code Block-->
             <div x-data="{ tab : 'preview' }" class="relative w-full mt-5">
@@ -52,8 +45,8 @@ image: accordion
                 </div>
                 <!--END: Tabs -->
                 <!--BEGIN: Preview -->
-                <div x-show="tab === 'preview'" x-ref="code" class="px-20 w-full h-96 rounded-lg bg-gradient-to-r from-yellow-600 to-amber-700">
-                    <div x-data="{ selected : 1 }" class="flex flex-col justify-center items-center p-20 space-y-1 text-slate-800">
+                <div x-show="tab === 'preview'" x-ref="code" class="px-2 h-96 rounded-lg bg-gradient-to-r from-yellow-600 to-amber-700">
+                    <div x-data="{ selected : 1 }" class="flex flex-col justify-center items-center px-2 py-20 md:p-20 space-y-1 text-slate-800">
                         <!--Question-->
                         <div class="flex flex-col w-full space-y-1">
                             <button @click="selected !== 1 ? selected = 1 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md">
@@ -126,7 +119,5 @@ image: accordion
 
         </div>
         <!--END: Component-->
-    </div>
     
-</main>
 @endsection

@@ -36,8 +36,20 @@
         @include('_partials.header')
         <!--END: Header-->
         
-        @yield('body')
+        <main class="mx-2 sm:mx-10 relative">
+
+            <div class="mt-10 grid grid-cols-12 gap-5 md:gap-10">
+                <!--BEGIN: Sidebar-->
+                <div class="hidden md:block col-span-2">
+                    @include('_partials.sidebar')
+                </div>
+                <!--END: Sidebar-->
+                    
+                @yield('body')
         
+            </div>
+    
+        </main>
         <!--BEGIN: Footer-->
         @include('_partials.footer')
         <!--END: Footer-->
