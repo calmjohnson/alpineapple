@@ -1,6 +1,7 @@
 ---
 extends: _layouts.component
 title: Accordion
+description: How to build an accordion ui component using Alpine.js and Taiwind Css
 author: Nonso Mbah
 image: accordion
 ---
@@ -20,7 +21,7 @@ image: accordion
             
             <!--BEGIN: Code Block-->
             <div x-data="{ tab : 'preview' }" class="relative w-full mt-5">
-                <textarea x-ref="copy" x-text="$refs.code.firstElementChild.outerHTML"></textarea>
+                
                 <!--BEGIN: Tabs -->
                 <div class="absolute z-10 px-5 mt-2 text-xs text-white top-0 right-0 flex justify-end items-center space-x-3">
                     <button @click="tab = 'preview'" :class="tab === 'preview' ? 'bg-black bg-opacity-50 p-2 rounded-md shadow' : ''">
@@ -30,9 +31,24 @@ image: accordion
                         Code
                     </button>
                     <span class="font-bold text-slate-100">|</span>
-                    <button @click="$refs.copy.select(), document.execCommand('copy')">
-                        Copy
-                    </button>
+                    <div x-data="{ copied : false }" class="relative flex flex-col items-center space-x-1">
+                        <span x-show="copied" class="absolute -mt-10 text-slate-500">Copied!</span>
+                        <button class="" @click="copied = true, setTimeout(() => copied = false, 2000), copyToClipboard($refs.code.firstElementChild.outerHTML)
+                        ">
+                            Copy
+                        </button>
+                    </div>
+                    <script>
+                        function copyToClipboard($data)
+                        {
+                            var input = document.createElement('textarea');
+                            input.innerHTML = $data;
+                            document.body.appendChild(input);
+                            input.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(input);
+                        }
+                    </script>
                 </div>
                 <!--END: Tabs -->
                 <!--BEGIN: Preview -->

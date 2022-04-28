@@ -6,7 +6,7 @@ return [
     'production' => false,
     'baseUrl' => '',
     'title' => 'Alpineapple',
-    'description' => 'Alpine JS UI Components.',
+    'description' => 'Accessible Alpine JS UI Components styled with Tailwind Css.',
     'collections' => [
         'ui_components' => [
             'path' => '{-title}'
