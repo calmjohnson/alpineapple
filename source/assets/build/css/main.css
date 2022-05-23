@@ -538,32 +538,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.25rem;
 }
 
-.h-full{
-  height: 100%;
-}
-
-.h-auto{
-  height: auto;
-}
-
-.h-20{
-  height: 5rem;
-}
-
 .h-10{
   height: 2.5rem;
 }
 
-.h-9{
-  height: 2.25rem;
-}
-
-.h-7{
-  height: 1.75rem;
-}
-
-.h-8{
-  height: 2rem;
+.h-auto{
+  height: auto;
 }
 
 .w-auto{
@@ -754,18 +734,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 5rem;
 }
 
-.px-1{
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
-.text-left{
-  text-align: left;
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .text-center{
@@ -857,12 +833,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-md{
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -877,42 +847,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: #979797;
 }
 
-.focus\:border-0:focus{
-  border-width: 0px;
-}
-
-.focus\:outline-none:focus{
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 .focus\:ring-0:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.focus-visible\:ring-2:focus-visible{
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.focus-visible\:ring-white:focus-visible{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-}
-
-.focus-visible\:ring-opacity-75:focus-visible{
-  --tw-ring-opacity: 0.75;
-}
-
-.focus-visible\:ring-offset-2:focus-visible{
-  --tw-ring-offset-width: 2px;
-}
-
-.focus-visible\:ring-offset-teal-300:focus-visible{
-  --tw-ring-offset-color: #5eead4;
 }
 
 @media (min-width: 640px){
@@ -932,11 +870,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
 

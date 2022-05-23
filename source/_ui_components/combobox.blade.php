@@ -56,6 +56,33 @@ image: combobox
                             </div>
                         </div>
                     </div>
+                    <!--JS-->
+                    <script>
+                        const frameworks = [
+                            { id: 1, name: 'Alpine js'},
+                            { id: 2, name: 'Vue js'},
+                            { id: 3, name: 'Laravel'},
+                            { id: 4, name: 'Tailwind css'},
+                            { id: 5, name: 'Svelte js'},
+                            { id: 6, name: 'Statamic'}
+                        ]
+
+                        let selected = ref(frameworks[0]);
+
+                        let query = ref('');
+
+                        let filteredFrameworks = computed(() =>
+                        query.value === ''
+                            ? frameworks
+                            : frameworks.filter((framework) =>
+                                framework.name
+                                .toLowerCase()
+                                .replace(/\s+/g, '')
+                                .includes(query.value.toLowerCase().replace(/\s+/g, ''))
+                            )
+                        )
+                    </script>
+                    <!--JS-->
                 </div>
                 <!--END: Preview -->
                 <!--BEGIN: Code -->
