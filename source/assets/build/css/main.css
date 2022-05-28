@@ -429,6 +429,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 .absolute{
   position: absolute;
 }
@@ -437,12 +441,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.inset-y-0{
+  top: 0px;
+  bottom: 0px;
+}
+
 .top-0{
   top: 0px;
 }
 
 .right-0{
   right: 0px;
+}
+
+.left-0{
+  left: 0px;
 }
 
 .z-10{
@@ -516,6 +529,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-1{
   margin-top: 0.25rem;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -775,8 +796,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
-.pr-4{
-  padding-right: 1rem;
+.pl-3{
+  padding-left: 0.75rem;
+}
+
+.pl-10{
+  padding-left: 2.5rem;
 }
 
 .text-center{
@@ -888,9 +913,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: #979797;
 }
 
-.focus\:text-red-900:focus{
+.hover\:bg-orange-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover{
   --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:ring-0:focus{
