@@ -433,12 +433,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   visibility: hidden;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
 
 .relative{
   position: relative;
+}
+
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .inset-y-0{
@@ -460,6 +471,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-10{
   z-index: 10;
+}
+
+.z-20{
+  z-index: 20;
 }
 
 .col-span-2{
@@ -587,6 +602,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
+.max-w-2xl{
+  max-width: 42rem;
+}
+
 .rotate-180{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -707,6 +726,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.125rem;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-t{
   border-top-width: 1px;
 }
@@ -723,6 +746,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-slate-400{
   --tw-border-opacity: 1;
   border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-opacity-75{
+  --tw-border-opacity: 0.75;
+}
+
+.border-opacity-25{
+  --tw-border-opacity: 0.25;
+}
+
+.border-opacity-50{
+  --tw-border-opacity: 0.5;
 }
 
 .bg-slate-900{
@@ -747,6 +787,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-25{
+  --tw-bg-opacity: 0.25;
+}
+
+.bg-opacity-75{
+  --tw-bg-opacity: 0.75;
+}
+
+.bg-opacity-95{
+  --tw-bg-opacity: 0.95;
 }
 
 .bg-gradient-to-r{
@@ -817,6 +869,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4{
   padding: 1rem;
+}
+
+.p-12{
+  padding: 3rem;
 }
 
 .px-5{
@@ -969,6 +1025,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 

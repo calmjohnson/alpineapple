@@ -154,7 +154,7 @@ image: listbox
                 </div>
                 <!--END: Preview -->
                 <!--BEGIN: Code -->
-                <div x-show="tab === 'code'" class=" w-full h-96 overflow-y-scroll rounded-lg bg-black text-white">
+                <div x-show="tab === 'code'" class="w-full h-96 overflow-y-scroll rounded-lg bg-black text-white">
                     <pre>
                         <code class="language-html">
 {{' 
