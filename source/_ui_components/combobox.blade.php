@@ -26,8 +26,7 @@ image: combobox
                     <span class="font-bold text-slate-100">|</span>
                     <div x-data="{ copied : false }" class="relative flex flex-col items-center space-x-1">
                         <span x-show="copied" class="absolute -mt-10 text-slate-500">Copied!</span>
-                        <button class="" @click="copied = true, setTimeout(() => copied = false, 2000), $refs.code.firstElementChild.removeAttribute('x-ignore'), copyToClipboard($refs.code.firstElementChild.outerHTML+'\n'+$refs.code.lastElementChild.outerHTML)
-                        ">
+                        <button class="" @click="copied = true, setTimeout(() => copied = false, 2000), $refs.code.firstElementChild.removeAttribute('x-ignore'), copyToClipboard($refs.code.firstElementChild.outerHTML+'\n'+$refs.code.lastElementChild.outerHTML)">
                             Copy
                         </button>
                     </div>

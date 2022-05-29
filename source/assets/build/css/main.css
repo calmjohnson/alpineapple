@@ -773,6 +773,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(147 51 234 / 0));
 }
 
+.from-blue-600{
+  --tw-gradient-from: #2563eb;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(37 99 235 / 0));
+}
+
 .to-blue-500{
   --tw-gradient-to: #3b82f6;
 }
@@ -787,6 +792,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .to-violet-700{
   --tw-gradient-to: #6d28d9;
+}
+
+.to-indigo-700{
+  --tw-gradient-to: #4338ca;
+}
+
+.to-sky-700{
+  --tw-gradient-to: #0369a1;
 }
 
 .bg-clip-text{
@@ -991,6 +1004,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-slate-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-50:hover{
+  --tw-bg-opacity: 0.5;
+}
+
+.hover\:bg-opacity-75:hover{
+  --tw-bg-opacity: 0.75;
 }
 
 .hover\:text-white:hover{
