@@ -121,7 +121,7 @@ image: dropdown
         </div>
         <!--Options-->
     </div>
-</div>1
+</div>
 '}}
                         </code>
                     </pre>

@@ -44,26 +44,27 @@ image: modal
                 <!--END: Tabs -->
 <!--Code to copy-->
 <div x-ref="code" class="invisible absolute">
-<div class="flex justify-center">
-    <div x-data="{open : false}" class="flex flex-col px-2 py-20 md:px-52 space-y-1 text-slate-800">
-        <div class="mt-1 w-40">
-            <button @click="open = true" class="flex items-center rounded bg-white shadow space-x-1 px-3 py-2">
-                <span>Actions</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-            </button>
-        </div>
-        <!--Options-->
-        <div x-show="open === true" x-transition @click.outside="open = false" class="flex flex-col text-sm w-40 left-0 mt-2 bg-white rounded-sm shadow-md overflow-hidden">
-            <div>
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">Add Task</a>
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">View Tasks</a>
+<div x-data="{ open: true }" class="absolute inset-0 flex items-center justify-center">
+    <div class="mt-1 w-40">
+        <button @click="open = true" class="flex items-center rounded text-white text-sm bg-white bg-opacity-25 border border-white border-opacity-50 shadow space-x-1 px-3 py-2">
+            Open dialog
+        </button>
+    </div>
+    <div x-transition x-show="open === true" class="flex justify-center items-center p-5 fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div @click.outside="open = false" class="flex flex-col relative max-w-2xl w-full rounded-lg shadow-lg p-12 bg-white">
+            <h1 class="text-3xl font-semibold text-slate-900">Confirm</h1>
+            <p class="mt-2 text-sm text-slate-700">
+                Are you really sure you want to do that?
+            </p>
+            <div class="mt-4 flex space-x-5">
+                <button @click="open = false" class="text-sm bg-blue-500 bg-opacity-25 text-blue-500 p-2 rounded-sm shadow-sm">
+                    Yes, please
+                </button>
+                <button @click="open = false" class="text-sm bg-red-500 bg-opacity-25 text-red-400 p-2 rounded-sm shadow-sm">
+                    Oh No
+                </button>
             </div>
-            <div class="border-t border-slate-400">
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">Edit Task</a>
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">Delete Tasks</a>
-            </div>
         </div>
-        <!--Options-->
     </div>
 </div>
 </div>
@@ -71,19 +72,28 @@ image: modal
 
                 <!--BEGIN: Preview -->
                 <div x-show="tab === 'preview'" class="px-2 h-96 rounded-lg bg-gradient-to-r from-purple-600 to-violet-700">
-                    <div x-data="{ open: true }" class="fixed inset-0 flex items-center justify-center">
+                    <div x-data="{ open: true }" class="absolute inset-0 flex items-center justify-center">
                         <div class="mt-1 w-40">
                             <button @click="open = true" class="flex items-center rounded text-white text-sm bg-white bg-opacity-25 border border-white border-opacity-50 shadow space-x-1 px-3 py-2">
                                 Open dialog
                             </button>
                         </div>
-                        <template x-teleport="body">
-                            <div @click="open = true" x-show="open = true" class="flex justify-center items-center fixed inset-0 bg-black bg-opacity-50 z-20">
-                                <div @click.outside="open = false" class="relative max-w-2xl w-full rounded-lg shadow-lg p-12 bg-white">
-                                    hey
+                        <div x-transition x-show="open === true" class="flex justify-center items-center p-5 fixed inset-0 bg-black bg-opacity-50 z-50">
+                            <div @click.outside="open = false" class="flex flex-col relative max-w-2xl w-full rounded-lg shadow-lg p-12 bg-white">
+                                <h1 class="text-3xl font-semibold text-slate-900">Confirm</h1>
+                                <p class="mt-2 text-sm text-slate-700">
+                                    Are you really sure you want to do that?
+                                </p>
+                                <div class="mt-4 flex space-x-5">
+                                    <button @click="open = false" class="text-sm bg-blue-500 bg-opacity-25 text-blue-500 p-2 rounded-sm shadow-sm">
+                                        Yes, please
+                                    </button>
+                                    <button @click="open = false" class="text-sm bg-red-500 bg-opacity-25 text-red-400 p-2 rounded-sm shadow-sm">
+                                        Oh No
+                                    </button>
                                 </div>
                             </div>
-                        </template>
+                        </div>
                     </div>
                 </div>
                 <!--END: Preview -->
@@ -92,28 +102,29 @@ image: modal
                     <pre>
                         <code class="language-html">
 {{' 
-<div class="flex justify-center">
-    <div x-data="{open : false}" class="flex flex-col px-2 py-20 md:px-52 space-y-1 text-slate-800">
-        <div class="mt-1 w-40">
-            <button @click="open = true" class="flex items-center rounded bg-white shadow space-x-1 px-3 py-2">
-                <span>Actions</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-            </button>
-        </div>
-        <!--Options-->
-        <div x-show="open === true" x-transition @click.outside="open = false" class="flex flex-col text-sm w-40 left-0 mt-2 bg-white rounded-sm shadow-md overflow-hidden">
-            <div>
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">Add Task</a>
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">View Tasks</a>
-            </div>
-            <div class="border-t border-slate-400">
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">Edit Task</a>
-                <a class="w-full block hover:bg-slate-200 p-2" href="#">Delete Tasks</a>
-            </div>
-        </div>
-        <!--Options-->
+<div x-data="{ open: true }" class="absolute inset-0 flex items-center justify-center">
+    <div class="mt-1 w-40">
+        <button @click="open = true" class="flex items-center rounded text-white text-sm bg-white bg-opacity-25 border border-white border-opacity-50 shadow space-x-1 px-3 py-2">
+            Open dialog
+        </button>
     </div>
-</div>1
+    <div x-transition x-show="open === true" class="flex justify-center items-center p-5 fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div @click.outside="open = false" class="flex flex-col relative max-w-2xl w-full rounded-lg shadow-lg p-12 bg-white">
+            <h1 class="text-3xl font-semibold text-slate-900">Confirm</h1>
+            <p class="mt-2 text-sm text-slate-700">
+                Are you really sure you want to do that?
+            </p>
+            <div class="mt-4 flex space-x-5">
+                <button @click="open = false" class="text-sm bg-blue-500 bg-opacity-25 text-blue-500 p-2 rounded-sm shadow-sm">
+                    Yes, please
+                </button>
+                <button @click="open = false" class="text-sm bg-red-500 bg-opacity-25 text-red-400 p-2 rounded-sm shadow-sm">
+                    Oh No
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 '}}
                         </code>
                     </pre>
