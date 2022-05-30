@@ -558,6 +558,34 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
+.mr-4{
+  margin-right: 1rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mr-6{
+  margin-right: 1.5rem;
+}
+
+.mr-1{
+  margin-right: 0.25rem;
+}
+
 .block{
   display: block;
 }
@@ -610,6 +638,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
+.w-20{
+  width: 5rem;
+}
+
+.w-52{
+  width: 13rem;
+}
+
 .max-w-2xl{
   max-width: 42rem;
 }
@@ -623,6 +659,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: default;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .select-none{
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -632,6 +672,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .list-none{
   list-style-type: none;
+}
+
+.appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .grid-cols-1{
@@ -815,6 +861,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-transparent{
+  background-color: transparent;
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -860,6 +910,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(37 99 235 / 0));
 }
 
+.from-sky-600{
+  --tw-gradient-from: #0284c7;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(2 132 199 / 0));
+}
+
 .to-blue-500{
   --tw-gradient-to: #3b82f6;
 }
@@ -882,6 +937,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .to-sky-700{
   --tw-gradient-to: #0369a1;
+}
+
+.to-blue-700{
+  --tw-gradient-to: #1d4ed8;
 }
 
 .bg-clip-text{
@@ -1018,6 +1077,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-semibold{
   font-weight: 600;
+}
+
+.leading-tight{
+  line-height: 1.25;
 }
 
 .text-transparent{
@@ -1168,6 +1231,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .focus\:ring-0:focus{
