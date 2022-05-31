@@ -12,7 +12,7 @@ title: Alpine JS UI Components
         <h1
           class="bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-center text-lg md:text-6xl font-black text-transparent"
         >
-          Accessible Alpine JS UI Components styled with Tailwind Css
+            Alpine JS UI Components styled with Tailwind Css
         </h1>
     </div>
     <!--END: Intro-->

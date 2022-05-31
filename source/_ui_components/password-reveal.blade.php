@@ -58,7 +58,7 @@ image: password-reveal
 
                 <!--BEGIN: Preview -->
                 <div x-show="tab === 'preview'" class="px-2 h-96 rounded-lg bg-gradient-to-r from-sky-600 to-blue-700">
-                    <div class="px-52 py-32">
+                    <div class="px-2 md:px-52 py-32">
                         <div x-data="{open: false, type: 'password'}">
                             <div class="flex items-center w-full relative cursor-default shadow bg-white rounded-lg">
                                 <input class="w-full h-10 px-3 text-slate-800 border-none text-sm rounded-lg focus:ring-0 outline-none" :type="type" placeholder="Password" type="password">
