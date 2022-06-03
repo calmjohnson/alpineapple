@@ -1,8 +1,3 @@
-<div class="flex justify-between">
+<div class="flex justify-center items-center">
     <x-logo/>
-    <!--Github-->
-    <div>
-        G
-    </div>
-    <!--Github-->
 </div>
