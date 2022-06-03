@@ -18,3 +18,5 @@ use TightenCo\Jigsaw\Jigsaw;
 
 
 \Torchlight\Jigsaw\TorchlightExtension::make($container, $events)->boot();
+
+$events->afterBuild(App\Listeners\GenerateSitemap::class);

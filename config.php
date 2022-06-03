@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 return [
     'production' => false,
-    'baseUrl' => '',
+    'baseUrl' => 'https://alpineapple.dev',
     'title' => 'Alpineapple',
     'description' => 'Accessible Alpine JS UI Components styled with Tailwind Css.',
     'collections' => [
