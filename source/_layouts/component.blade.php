@@ -53,6 +53,6 @@
         <!--BEGIN: Footer-->
         @include('_partials.footer')
         <!--END: Footer-->
-
+        
     </body>
 </html>
