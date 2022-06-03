@@ -6,3 +6,5 @@ Alpine.plugin(focus)
 window.Alpine = Alpine
 
 Alpine.start()
+
+import * as Turbo from "@hotwired/turbo"

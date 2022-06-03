@@ -1320,4 +1320,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .lg\:justify-center{
+    justify-content: center;
+  }
 }

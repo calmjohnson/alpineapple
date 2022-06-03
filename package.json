@@ -16,6 +16,7 @@
     "dependencies": {
         "@alpinejs/collapse": "^3.10.2",
         "@alpinejs/focus": "^3.10.2",
+        "@hotwired/turbo": "^7.1.0",
         "@ryangjchandler/alpine-clipboard": "^2.1.0",
         "alpinejs": "^3.9.6",
         "cross-env": "^7.0.3",

@@ -44,14 +44,10 @@ image: toggle
                 <!--END: Tabs -->
 <!--Code to copy-->
 <div x-ref="code" class="invisible absolute">
-<div x-data="{open: false, type: 'password'}">
-    <div class="flex items-center w-full relative cursor-default shadow bg-white rounded-lg">
-        <input class="w-full h-10 px-3 text-slate-800 border-none text-sm rounded-lg focus:ring-0 outline-none" :type="type" placeholder="Password" type="password">
-        <button class="px-2 h-auto">
-            <svg x-show="open === true" @click="open = false, type = 'password'" xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 right-0 mt-3 mr-1 cursor-pointer h-5 w-5" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M0 0h24v24H0z" stroke="none"></path><path d="m3 3 18 18M10.584 10.587a2 2 0 0 0 2.828 2.83"></path><path d="M9.363 5.365A9.466 9.466 0 0 1 12 5c4 0 7.333 2.333 10 7-.778 1.361-1.612 2.524-2.503 3.488m-2.14 1.861C15.726 18.449 13.942 19 12 19c-4 0-7.333-2.333-10-7 1.369-2.395 2.913-4.175 4.632-5.341"></path></svg>
-            <svg x-show="open != true" @click="open = true, type = 'text'" xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 right-0 mt-3 mr-1 cursor-pointer h-5 w-5" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"></path><circle cx="12" cy="12" r="2"></circle><path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7"></path></svg>
-        </button>
-    </div>
+<div x-data="{ toggle : false }" 
+    @click="toggle = ! toggle" 
+    class="relative cursor-pointer h-6 w-12 rounded-full transition-all duration-300 ease-in-out bg-cyan-400" :class=" toggle ? 'bg-cyan-400' : 'bg-slate-400' ">
+    <span class="absolute h-6 w-6 rounded-full bg-white transition-all duration-300 ease-in-out" :class=" toggle ? 'translate-x-7' : '' "></span>
 </div>
 </div>
 <!--Code to copy-->
@@ -72,14 +68,10 @@ image: toggle
                     <pre>
                         <code class="language-html">
 {{' 
-<div x-data="{open: false, type: \'password\'}">
-    <div class="flex items-center w-full relative cursor-default shadow bg-white rounded-lg">
-        <input class="w-full h-10 px-3 text-slate-800 border-none text-sm rounded-lg focus:ring-0 outline-none" :type="type" placeholder="Password" type="password">
-        <button class="px-2 h-auto">
-            <svg x-show="open === true" @click="open = false, type = \'password\'" xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 right-0 mt-3 mr-1 cursor-pointer h-5 w-5" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M0 0h24v24H0z" stroke="none"></path><path d="m3 3 18 18M10.584 10.587a2 2 0 0 0 2.828 2.83"></path><path d="M9.363 5.365A9.466 9.466 0 0 1 12 5c4 0 7.333 2.333 10 7-.778 1.361-1.612 2.524-2.503 3.488m-2.14 1.861C15.726 18.449 13.942 19 12 19c-4 0-7.333-2.333-10-7 1.369-2.395 2.913-4.175 4.632-5.341"></path></svg>
-            <svg x-show="open != true" @click="open = true, type = \'text\'" xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 right-0 mt-3 mr-1 cursor-pointer h-5 w-5" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"></path><circle cx="12" cy="12" r="2"></circle><path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7"></path></svg>
-        </button>
-    </div>
+<div x-data="{ toggle : false }" 
+    @click="toggle = ! toggle" 
+    class="relative cursor-pointer h-6 w-12 rounded-full transition-all duration-300 ease-in-out bg-cyan-400" :class=" toggle ? \'bg-cyan-400\' : \'bg-slate-400\' ">
+    <span class="absolute h-6 w-6 rounded-full bg-white transition-all duration-300 ease-in-out" :class=" toggle ? \'translate-x-7\' : \'\' "></span>
 </div>
 '}}
                         </code>
