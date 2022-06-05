@@ -9,7 +9,11 @@
         <!--BEGIN: Google verification-->
         <meta name="google-site-verification" content="0adrCvwZ3UQ8wJrrJhhdIsu3CZFFBg6Z3yT-p3UFGvc" />
         <!--BEGIN: Google verification-->
-        
+
+        <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="BWTFRLNN" defer></script>
+        <!-- / Fathom -->
+
         <!--BEGIN: Favicon-->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicon/apple-touch-icon.png' }}"/>
         <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon/favicon-32x32.png' }}"/>
