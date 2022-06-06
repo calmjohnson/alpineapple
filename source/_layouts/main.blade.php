@@ -6,6 +6,21 @@
         <link rel="canonical" href="{{ $page->getUrl() }}">
         <meta name="description" content="{{ $page->description }}">
 
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.alpineapple.dev/">
+        <meta property="og:title" content="Alpineapple - Free and open source Alpine JS UI Components styled with Tailwind Css.">
+        <meta property="og:description" content="How to build Alpine js UI components styled with Tailwind Css!">
+        <meta property="og:image" content="{{ '../assets/images/social.png' }}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://www.alpinetoolbox.com/">
+        <meta property="twitter:title" content="Alpineapple - Free and open source Alpine JS UI Components styled with Tailwind Css.">
+        <meta property="twitter:description" content="How to build Alpine js UI components styled with Tailwind Css!">
+        <meta property="twitter:image" content="{{ '../assets/images/pineapple.png' }}">
+
+
         <!--BEGIN: Google verification-->
         <meta name="google-site-verification" content="0adrCvwZ3UQ8wJrrJhhdIsu3CZFFBg6Z3yT-p3UFGvc" />
         <!--BEGIN: Google verification-->
