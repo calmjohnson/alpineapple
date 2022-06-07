@@ -1,7 +1,7 @@
 ---
 extends: _layouts.component
 title: Accordion
-description: How to build an accordion ui component using Alpine.js and Tailwind Css
+description: How to build an accessible accordion ui component using Alpine.js and Tailwind Css
 author: Nonso Mbah
 image: accordion
 ---
@@ -46,33 +46,41 @@ image: accordion
                 <!--END: Tabs -->
                 <!--BEGIN: Preview -->
                 <div x-show="tab === 'preview'" x-ref="code" class="px-2 h-96 rounded-lg bg-gradient-to-r from-yellow-600 to-amber-700">
-                    <div x-data="{ selected : 1 }" class="flex flex-col justify-center items-center px-2 py-20 md:p-20 space-y-1 text-slate-800">
-                        <!--Question-->
-                        <div class="flex flex-col w-full space-y-1">
-                            <button @click="selected !== 1 ? selected = 1 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md">
-                                <span class="mr-auto text-sm">First question</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" 
-                                    :class="selected === 1 ? 'rotate-180' : ''"
-                                    class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-                            </button>
-                            <div x-show="selected === 1" class="p-2 text-sm rounded bg-white">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
-                            </div>
-                        </div>
-                        <!--Question-->
-                        <!--Question-->
-                        <div class="flex flex-col w-full space-y-1">
-                            <button @click="selected !== 2 ? selected = 2 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md">
-                                <span class="mr-auto text-sm">Second question</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" 
-                                    :class="selected === 2 ? 'rotate-180' : ''"
-                                    class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-                            </button>
-                            <div x-show="selected === 2" class="p-2 text-sm rounded bg-white">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
-                            </div>
-                        </div>
-                        <!--Question-->
+                    <div x-data="{ selected : 1 }">
+                        <ul aria-label="Accordion Control Group Buttons" class="flex flex-col justify-center items-center px-2 py-20 md:p-20 space-y-1 text-slate-800">
+                            <!--Question-->
+                            <li class="flex flex-col w-full space-y-1">
+                                <button aria-controls="content-1" aria-expanded="false" id="accordion-control-1"
+                                    @click="selected !== 1 ? selected = 1 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md"
+                                    :aria-expanded="selected === 1 ? 'true' : 'false'">
+                                    <span class="mr-auto text-sm">First question</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-label="chevron"
+                                        :class="selected === 1 ? 'rotate-180' : ''"
+                                        class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
+                                </button>
+                                <div aria-hidden="true" id="content-1" x-show="selected === 1" class="p-2 text-sm rounded bg-white"
+                                    :aria-hidden="selected === 1 ? 'false' : 'true'">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
+                                </div>
+                            </li>
+                            <!--Question-->
+                            <!--Question-->
+                            <li class="flex flex-col w-full space-y-1">
+                                <button aria-controls="content-2" aria-expanded="false" id="accordion-control-2"
+                                    @click="selected !== 2 ? selected = 2 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md"
+                                    :aria-expanded="selected === 2 ? 'true' : 'false'">
+                                    <span class="mr-auto text-sm">Second question</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-label="chevron"
+                                        :class="selected === 2 ? 'rotate-180' : ''"
+                                        class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
+                                </button>
+                                <div aria-hidden="true" id="content-2" x-show="selected === 2" class="p-2 text-sm rounded bg-white"
+                                    :aria-hidden="selected === 2 ? 'false' : 'true'">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
+                                </div>
+                            </li>
+                            <!--Question-->
+                        </ul>
                     </div>
                 </div>
                 <!--END: Preview -->
@@ -81,33 +89,41 @@ image: accordion
                     <pre>
                         <code class="language-html">
 {{' 
-<div x-data="{ selected : 2 }" class="flex flex-col justify-center items-center my-20 mx-20 space-y-1 text-slate-800">
-    <!--Question-->
-    <div class="flex flex-col w-full space-y-1">
-        <button @click="selected !== 1 ? selected = 1 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md">
-            <span class="mr-auto text-sm">First question</span>
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                :class="selected === 1 ? \'rotate-180\' : \'\'"
-                class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div x-show="selected === 1" x-collapse class="p-2 text-sm rounded bg-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
-        </div>
-    </div>
-    <!--Question-->
-    <!--Question-->
-    <div class="flex flex-col w-full space-y-1">
-        <button @click="selected !== 2 ? selected = 2 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md">
-            <span class="mr-auto text-sm">Second question</span>
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                :class="selected === 2 ? \'rotate-180\' : \'\'"
-                class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div x-show="selected === 2" x-collapse class="p-2 text-sm rounded bg-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
-        </div>
-    </div>
-    <!--Question-->
+<div x-data="{ selected : 1 }">
+    <ul aria-label="Accordion Control Group Buttons" class="flex flex-col justify-center items-center px-2 py-20 md:p-20 space-y-1 text-slate-800">
+        <!--Question-->
+        <li class="flex flex-col w-full space-y-1">
+            <button aria-controls="content-1" aria-expanded="false" id="accordion-control-1"
+                @click="selected !== 1 ? selected = 1 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md"
+                :aria-expanded="selected === 1 ? \'true\' : \'false\'">
+                <span class="mr-auto text-sm">First question</span>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-label="chevron"
+                    :class="selected === 1 ? \'rotate-180\' : \'\'"
+                    class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div aria-hidden="true" id="content-1" x-show="selected === 1" class="p-2 text-sm rounded bg-white"
+                :aria-hidden="selected === 1 ? \'false\' : \'true\'">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
+            </div>
+        </li>
+        <!--Question-->
+        <!--Question-->
+        <li class="flex flex-col w-full space-y-1">
+            <button aria-controls="content-2" aria-expanded="false" id="accordion-control-2"
+                @click="selected !== 2 ? selected = 2 : selected = null" class="flex items-center w-full bg-white p-3 rounded-md"
+                :aria-expanded="selected === 2 ? \'true\' : \'false\'">
+                <span class="mr-auto text-sm">Second question</span>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-label="chevron"
+                    :class="selected === 2 ? \'rotate-180\' : \'\'"
+                    class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div aria-hidden="true" id="content-2" x-show="selected === 2" class="p-2 text-sm rounded bg-white"
+                :aria-hidden="selected === 2 ? \'false\' : \'true\'">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod risus sit amet dolor luctus rutrum. Proin et condimentum est. Duis ac pulvinar magna, quis tincidunt eros.
+            </div>
+        </li>
+        <!--Question-->
+    </ul>
 </div>
 '}}
                         </code>

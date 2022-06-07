@@ -6,6 +6,20 @@
         <link rel="canonical" href="{{ $page->getUrl() }}">
         <meta name="description" content="{{ $page->description }}">
 
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.alpineapple.dev/">
+        <meta property="og:title" content="{{ $page->title }} Component | Alpineapple">
+        <meta property="og:description" content="{{ $page->description }}">
+        <meta property="og:image" content="{{ '../assets/images/social.png' }}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://www.alpinetoolbox.com/">
+        <meta property="twitter:title" content="{{ $page->title }} Component | Alpineapple">
+        <meta property="twitter:description" content="{{ $page->description }}">
+        <meta property="twitter:image" content="{{ '../assets/images/pineapple.png' }}">
+
         <!--BEGIN: Google verification-->
         <meta name="google-site-verification" content="0adrCvwZ3UQ8wJrrJhhdIsu3CZFFBg6Z3yT-p3UFGvc" />
         <!--BEGIN: Google verification-->
@@ -13,7 +27,7 @@
         <!-- Fathom - beautiful, simple website analytics -->
         <script src="https://cdn.usefathom.com/script.js" data-site="BWTFRLNN" defer></script>
         <!-- / Fathom -->
-        
+
         <!--BEGIN: Favicon-->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ '../assets/images/favicon/apple-touch-icon.png' }}"/>
         <link rel="icon" type="image/png" sizes="32x32" href="{{ '../assets/images/favicon/favicon-32x32.png' }}"/>
@@ -24,7 +38,7 @@
         <meta name="theme-color" content="#ffffff" />
         <!--END: Favicon-->
 
-        <title>{{ $page->title }} - Alpineapple</title>
+        <title>{{ $page->title }} Component | Alpineapple</title>
         
         <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/androidstudio.min.css">
         
