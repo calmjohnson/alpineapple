@@ -40,14 +40,10 @@
 
         <title>{{ $page->title }} Component | Alpineapple</title>
         
-        <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/androidstudio.min.css">
         
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
-
         
-        <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script>
     </head>
     <body class="font-Fira-Sans bg-slate-900">
         <!--BEGIN: Header-->

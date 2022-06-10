@@ -11,9 +11,12 @@ image: accordion
         <!--BEGIN: Component-->
         <div class="col-span-12 w-auto md:col-span-7">
             <h1 class="font-bold text-3xl md:text-4xl text-white">{{ $page->title }}</h1>
-            
+            <p class=" text-slate-300">
+                Accordions are common design structures used to organize and hide content. 
+                They are popular with faqs.
+            </p>
             <!--BEGIN: Code Block-->
-            <div x-data="{ tab : 'preview' }" class="relative w-full mt-5">
+            <div x-cloak x-data="{ tab : 'preview' }" class="relative w-full mt-5">
                 
                 <!--BEGIN: Tabs -->
                 <div class="absolute z-10 px-5 mt-2 text-xs text-white top-0 right-0 flex justify-end items-center space-x-3">
@@ -85,7 +88,7 @@ image: accordion
                 </div>
                 <!--END: Preview -->
                 <!--BEGIN: Code -->
-                <div x-show="tab === 'code'" class=" w-full h-96 overflow-y-scroll rounded-lg bg-black text-white">
+                <div x-show="tab === 'code'" class="w-full h-96 overflow-y-scroll rounded-lg bg-black text-white">
                     <pre>
                         <code class="language-html">
 {{' 
@@ -133,6 +136,7 @@ image: accordion
             </div>
             <!--END: Code Block-->
 
+            @include('_partials.tutorials.accordion')
         </div>
         <!--END: Component-->
     

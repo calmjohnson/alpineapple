@@ -19,6 +19,7 @@
         "@ryangjchandler/alpine-clipboard": "^2.1.0",
         "alpinejs": "^3.9.6",
         "cross-env": "^7.0.3",
-        "fast-glob": "^3.2.11"
+        "fast-glob": "^3.2.11",
+        "highlight.js": "^11.5.1"
     }
 }
