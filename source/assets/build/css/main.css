@@ -346,6 +346,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-10{margin-top:2.5rem;margin-bottom:2.5rem}
 .my-5{margin-top:1.25rem;margin-bottom:1.25rem}
 .my-2{margin-top:0.5rem;margin-bottom:0.5rem}
+.mx-4{margin-left:1rem;margin-right:1rem}
 .mt-5{margin-top:1.25rem}
 .mt-10{margin-top:2.5rem}
 .mt-4{margin-top:1rem}
@@ -383,6 +384,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .list-none{list-style-type:none}
 .grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
 .grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}
+.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
 .flex-col{flex-direction:column}
 .items-end{align-items:flex-end}
 .items-center{align-items:center}
@@ -491,7 +493,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248 / var(--tw-text-opacity))}
 .text-slate-50{--tw-text-opacity:1;color:rgb(248 250 252 / var(--tw-text-opacity))}
 .text-lime-400{--tw-text-opacity:1;color:rgb(163 230 53 / var(--tw-text-opacity))}
-.text-yellow-200{--tw-text-opacity:1;color:rgb(254 240 138 / var(--tw-text-opacity))}
 .text-yellow-100{--tw-text-opacity:1;color:rgb(254 249 195 / var(--tw-text-opacity))}
 .underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}
 .underline-offset-8{text-underline-offset:8px}
@@ -536,7 +537,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .md\:px-32{padding-left:8rem;padding-right:8rem}
 .md\:text-6xl{font-size:3.75rem;line-height:1}
 .md\:text-4xl{font-size:2.25rem;line-height:2.5rem}
-.md\:text-2xl{font-size:1.5rem;line-height:2rem}
-.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}
+.md\:text-xl{font-size:1.25rem;line-height:1.75rem}
+.md\:text-2xl{font-size:1.5rem;line-height:2rem}}
 @media (min-width: 1024px){
-.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}
+.lg\:mx-10{margin-left:2.5rem;margin-right:2.5rem}
+.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}
+.lg\:gap-10{gap:2.5rem}}

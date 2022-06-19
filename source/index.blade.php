@@ -5,7 +5,7 @@ title: Alpineapple | Alpine JS UI Components styled with Tailwind Css
 @extends('_layouts.main')
 
 @section('body')
-<main class="mx-10">
+<main class="mx-4 lg:mx-10">
 
     <!--BEGIN: Intro-->
     <div class="mt-5 sm:mt-10 flex justify-center">
@@ -20,7 +20,8 @@ title: Alpineapple | Alpine JS UI Components styled with Tailwind Css
     <!--BEGIN: Components-->
     <div class="mt-10 sm:mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         @foreach ($ui_components as $component)
-            <a title="{{ $component->title.' Component' }}" href="{{ $component->getUrl() }}" class="flex justify-center flex-col space-y-2">
+            <a title="{{ $component->title.' Component' }}" href="{{ $component->getUrl() }}" 
+                class="flex flex-col space-y-2">
                 @include('_partials.svgs.image', ['component' => $component->image])
                 <span class="text-base text-white font-medium">{{ $component->title }}</span>
             </a>
