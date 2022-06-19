@@ -136,7 +136,6 @@ image: accordion
             </div>
             <!--END: Code Block-->
 
-            @include('_partials.tutorials.accordion')
         </div>
         <!--END: Component-->
     
