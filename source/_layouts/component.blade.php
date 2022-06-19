@@ -50,6 +50,8 @@
         @include('_partials.header')
         <!--END: Header-->
         
+        @include('_partials.mobile-menu')
+
         <main class="mx-2 sm:mx-10 relative">
 
             <div class="mt-10 grid grid-cols-12 gap-5 md:gap-10">
