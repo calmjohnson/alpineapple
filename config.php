@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 return [
     'production' => false,
-    'baseUrl' => '',
+    'baseUrl' => 'https://alpineapple.netlify.app/',
     'title' => 'Alpineapple',
     'description' => 'Free and open source Alpine JS UI Components styled with Tailwind Css.',
     'collections' => [
